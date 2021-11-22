@@ -6,4 +6,9 @@ git config --global core.quotepath off
 git config --global core.autocrlf input
 git config --global init.defaultBranch main
 
-git config --list
+git config --list   # ПРОСМОТРЕТЬ НАСТРОЙКИ
+
+git init            # инициализация репозитория
+git add .           # добваить все файлы в track
+git commit -m "описание" # сделать коммит
+
