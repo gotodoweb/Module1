@@ -11,12 +11,12 @@
 }
 
 {
-	const item2 = 'sumsung Galaxy S21';
-	const count2 =  10;
-	const category2 = 'mobile phone';
-	const price2 = 64990;
+	const item = 'sumsung Galaxy S21';
+	const count =  10;
+	const category = 'mobile phone';
+	const price = 64990;
 
-	console.log(item2);
-	console.log(`общая сумма товара: ${count2 * price2}`);
+	console.log(item);
+	console.log(`общая сумма товара: ${count * price}`);
 }
 
