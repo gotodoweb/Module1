@@ -32,7 +32,7 @@
 
 	const price = +prompt('Цена товара', 2200);	
 	console.log(typeof price + " цена") ;
-	console.log(Number.isFinite(count));
+	console.log(Number.isFinite(price));
 
 	console.log(`На складе ${count} единицы товара "${item}" на сумму ${count * price} деревянных`)
 
