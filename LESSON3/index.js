@@ -22,15 +22,14 @@
 
 {
 	const item = prompt('Наименование товара', 'Приставка денди');
-
 	const count = +prompt('Количество товара', 3);
+	const category = prompt('Категория товара', 'Приставки');
+	const price = +prompt('Цена товара', 2200);
+
+	console.log(typeof item + " наименование товара");
 	console.log(typeof count + " количество товара");
 	console.log(Number.isFinite(count));
-
-
-	const category = prompt('Категория товара', 'Приставки' );
-
-	const price = +prompt('Цена товара', 2200);	
+	console.log(typeof category + " категория товара");
 	console.log(typeof price + " цена") ;
 	console.log(Number.isFinite(price));
 
