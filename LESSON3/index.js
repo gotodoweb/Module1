@@ -20,7 +20,7 @@
 	console.log(`общая сумма товара: ${count * price}`);
 }
 
-{
+{	
 	const item = prompt('Наименование товара', 'Приставка денди');
 	const count = +prompt('Количество товара', 3);
 	const category = prompt('Категория товара', 'Приставки');
