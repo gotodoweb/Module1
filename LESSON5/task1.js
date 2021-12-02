@@ -2,7 +2,9 @@
 
 const converter = (eu = 1) => {
 	let result = eu;
-	return result * 87.6;
+	let usd = 73;
+	
+	return result * 1.2 * usd;
 }
 
 console.log(converter());
