@@ -14,8 +14,7 @@ const mintwo = () => {
 		b = +prompt('Введите 2-ое число');
 	}
 
-	let min = a < b ? a : b;
-	return min;
+	return sqrt((a + a * ((a - b) / (a + b)) / 2) + (a + a * ((a - b) / (a + b)) / 2));
 }
 
 console.log(mintwo());
