@@ -1,6 +1,6 @@
 'use strict';
 
-const obj = {
+const cart = {
 	items : [],
 	totalPrice: 0,
 	count:  0,
@@ -15,20 +15,16 @@ const obj = {
 		this.increaseCount(count);
 	},
 	increaseCount(count) {
-		let currunetCount = 0;
-		this.items.forEach(item => {
-			currunetCount += item.count;
-		});
-		this.count = currunetCount;
+		this.count += count;
 	},
 	calculateItemPrice() {
-		let ItemPrice = 0;
+		let itemPrice = 0;
 		this.items.map((item) => {
 			// console.log(`Добавлено в коризну:товар ${item.item}	общая сумма ${item.price * item.count}`);
-			ItemPrice += item.price * item.count;
+			itemPrice += item.price * item.count;
 			
 		});
-		this.totalPrice = ItemPrice;
+		this.totalPrice = itemPrice;
 	},
 	clear() {
 		this.items = [];
@@ -36,21 +32,19 @@ const obj = {
 		this.count = 0;
 	}, 
 	print() {
-		const objStr = JSON.stringify(obj);
+		const objStr = JSON.stringify(this.items);
 		console.log(objStr);
-		// const cartObj = JSON.parse(objStr);
-		// console.log(cartObj);
+		console.log('Общая стоимомость корзины:', this.totalPrice);
+
 	},
 };
 
-obj.add('pepsi', 10, 20);
-obj.add('coca', 30, 40);
-obj.add('sprite', 40, 60);
+cart.add('pepsi', 10, 20);
+cart.add('coca', 30, 40);
+cart.add('sprite', 40, 60);
 
-obj.clear();
-console.log(obj.print());
-console.log('totalPrice', obj.totalPrice);
-
+// cart.clear();
+cart.print();
 
 
 
