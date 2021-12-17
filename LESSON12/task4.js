@@ -33,7 +33,7 @@ const cart = {
 	print() {
 		const objStr = JSON.stringify(this.items);
 		console.log(objStr);
-		console.log('Общая стоимомость корзины:', cart.totalPrice);
+		console.log('Общая стоимомость корзины:', this.totalPrice);
 	},
 
 	set setDiscount(val) {
@@ -52,7 +52,7 @@ cart.add('sprite', 40, 60);
 cart.add('baikal', 50, 10);
 
 
-// cart.clear();
+
 // cart.setDiscount = 'METHED';
 cart.setDiscount = 'NEWYEAR';
 cart.print();
