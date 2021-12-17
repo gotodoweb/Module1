@@ -16,16 +16,10 @@ const getTwoNumber = () => {
 		}
 		TwoNumber.push(numUser);
 	} while (TwoNumber.length !== 2);
-
-	// console.log(TwoNumber);
-
+	
 	TwoNumber.sort(function (a, b) {
 		return a - b;
 	});
-	// console.log(TwoNumber);
-
-	// console.log(TwoNumber.length);
-	// console.log(Array.isArray(TwoNumber));
 
 	return TwoNumber;
 };
