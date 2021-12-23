@@ -13,7 +13,7 @@
 
 
 	const game = () => {
-		alert('Начнем с игры КНБ - победитель будет ходить первым в Marble')
+		
 		const result = {
 			player: 0,
 			computer: 0,
@@ -27,7 +27,7 @@
 
 		const lang = FIGURES_RUS;
 		return function start() {
-
+			alert('Начнем с игры КНБ - победитель будет ходить первым в Marble')
 			let userWord = prompt(`${lang}`, lang[1]);
 
 
@@ -128,6 +128,7 @@
 			console.log('move', move);
 
 			const doplayer = () => {
+
 				alert('Ходит player');
 				let randombot = () => {
 					return Math.floor(Math.random() * 10 + 1);
@@ -178,6 +179,8 @@
 			}
 
 			const dobot = () => {
+
+
 				alert('ходит бот!');
 				let botguessnumber = guessnum(begin.bot);
 				console.log('botguessnumber', botguessnumber, typeof botguessnumber);
@@ -213,12 +216,33 @@
 			while ((begin.player > 0) || (begin.bot > 0)) {
 				if (begin.player <= 0) {
 					alert(`Вы проиграли - Game over! \n вы: ${begin.player} \n bot: ${begin.bot} `);
-					return console.log('Game over!');
+					// return console.log('Game over!');
+					let again = confirm('нажмите OK если хотите играть снова\n нажмите Cansel если хотите завершить игру');
+					console.log('again', again);
+					if (again === true) {
+						// throw '';
+						return start();
+						
+					}
+
+					if (again === false) {
+						return alert('Game over!');
+					};
 				}
 
 				if (begin.bot <= 0) {
 					alert(`Вы выиграли - Game over! \n вы: ${begin.player} \n bot: ${begin.bot} `);
-					return console.log('Game over!');
+					// return console.log('Game over!');
+					let again = confirm('нажмите OK если хотите играть снова\n нажмите Cansel если хотите завершить игру');
+					console.log('again', again);
+					if (again === true) {
+						// throw '';						
+						return start();
+					}
+
+					if (again === false) {
+						return alert('Game over!');
+					};
 				}
 
 				if (move === true) {
@@ -232,8 +256,9 @@
 				move = !move;
 
 			};
-		}
 
+
+		}
 
 
 	}
